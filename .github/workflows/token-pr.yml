@@ -27,6 +27,16 @@ jobs:
           # it uses the directory named "tokens" to store this json file (change this if you changed it above to use a different folder)
           dir: 'tokens'
 
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          # we use version 14.x of node
+          node-version: 14.x
+
+      # We now run npm i to install all dependencies and run the "transfrom" script that is defined in the package.json (change this if you need to)
+      - name: Transform design tokens 
+        run: 'npm i && npm run transform-tokens'
+
       # Make changes to pull request here
       - name: Create Pull Request
         id: createpr
