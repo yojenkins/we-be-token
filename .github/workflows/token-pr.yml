@@ -3,9 +3,8 @@ name: Create PR with result of design token export
 # this triggers the action when a post to "https://api.github.com/repos/:username/:repo/dispatches" comes in
 on:
   repository_dispatch:
-    # and the event_type property from the request body is 'update-tokens'
     types: token-pr
-# the following defines the jon that is run if the above is true
+
 jobs:
   build:
     name: Create PR
