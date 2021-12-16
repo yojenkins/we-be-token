@@ -1,10 +1,12 @@
 const axios = require('axios')
+const { writeFile } = require('fs/promises')
 
 
-async function fetchFromZH(url) {
+async function fetchFromZH(name, url) {
     try {
         const resp = await axios.get(url)
-        return resp.data
+        
+        return {name, data: resp.data}
     } catch (error) {
         return error.response.data || {error: `Unable to fetch tokens from ${url}`}
     }
@@ -13,14 +15,16 @@ async function fetchFromZH(url) {
 
 async function gatherTokens() {
     const URLS = [
-        'https://remaxdesign.zeroheight.com/api/token_file/a1f2e84fe1fd/share',
-        'https://remaxdesign.zeroheight.com/api/token_file/a1f2e84feccc/share'
+        {name: 'colors', url: 'https://remaxdesign.zeroheight.com/api/token_file/a1f2e84fe1fd/share',}   
     ]
+      const responses = await Promise.all(URLS.map(({name, url}) => fetchFromZH(name, url)))
 
+      console.log(responses.filter(val => !val.error))
 
-      const values = await Promise.all(URLS.map(url => fetchFromZH(url)))
-
-      console.log(values.filter(val => !val.error))   
+      responses.filter(val => !val.data.error).map(({name, data}) => {
+        writeFile(`./tokens/${name}-tokens.json`, JSON.stringify(data))
+      })
+      
  
 }
 
