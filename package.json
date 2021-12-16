@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yojenkins/we-be-token#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "style-dictionary": "^3.0.3"
   }
 }
