@@ -38,6 +38,7 @@ StyleDictionary.registerTransformGroup({
         'size/percent',
     ]),
 })
+
   
 const StyleDictionaryExtended = StyleDictionary.extend(baseConfig)
   
