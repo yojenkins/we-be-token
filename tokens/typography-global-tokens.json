@@ -1,0 +1,41 @@
+{
+  "font": {
+    "global": {
+      "family": {
+        "openSans": { "value": "'Open Sans', 'Arial', sans-serif" },
+        "montserrat": { "value": "'Montserrat', 'Arial', sans-serif" }
+      }
+    }
+  },
+  "typography": {
+    "global": {
+      "alignment": {
+        "left": { "value": "left" },
+        "right": { "value": "right" },
+        "center": { "value": "center" },
+        "justify": { "value": "justify" }
+      },
+      "decoration": {
+        "none": { "value": "none" },
+        "underline": { "value": "underline" },
+        "lineThrough": { "value": "line-through" }
+      },
+      "style": {
+        "normal": { "value": "normal" },
+        "italic": { "value": "italic" }
+      },
+      "transform": { "uppercase": { "value": "uppercase" } },
+      "weight": {
+        "100": { "value": "100" },
+        "200": { "value": "200" },
+        "300": { "value": "300" },
+        "400": { "value": "400" },
+        "500": { "value": "500" },
+        "600": { "value": "600" },
+        "700": { "value": "700" },
+        "800": { "value": "800" },
+        "900": { "value": "900" }
+      }
+    }
+  }
+}
