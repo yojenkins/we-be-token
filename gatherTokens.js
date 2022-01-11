@@ -19,9 +19,12 @@ async function fetchFromZH(name, url) {
 
 async function gatherTokens() {
     const URLS = [
-        {name: 'color', url: 'https://remaxdesign.zeroheight.com/api/token_file/a1f2e84fe1fd/share',},
+        {name: 'color-global', url: 'https://remaxdesign.zeroheight.com/api/token_file/883ff9e9447f/share'},
+        {name: 'color-alias', url: 'https://remaxdesign.zeroheight.com/api/token_file/56fbaaa49948/share'},
         {name: 'size-global', url: 'https://remaxdesign.zeroheight.com/api/token_file/e127d3fffa09/share'},
-        {name: 'size-alias', url: 'https://remaxdesign.zeroheight.com/api/token_file/5ad282b0c7c9/share'}
+        {name: 'size-alias', url: 'https://remaxdesign.zeroheight.com/api/token_file/5ad282b0c7c9/share'},
+        {name: 'typography-global', url: 'https://remaxdesign.zeroheight.com/api/token_file/22605184a021/share'},
+        {name: 'typography-alias', url: 'https://remaxdesign.zeroheight.com/api/token_file/5cf07899e712/share'}
     ]
       const responses = await Promise.all(URLS.map(({name, url}) => fetchFromZH(name, url)))
 
