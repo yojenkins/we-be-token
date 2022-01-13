@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run transform-tokens",
-    "transform-tokens": "node ./styleDictionary.js"
+    "transform-tokens": "node ./scripts/build.js"
   },
   "repository": {
     "type": "git",

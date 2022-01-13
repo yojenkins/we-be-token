@@ -31,7 +31,8 @@ async function gatherTokens() {
       console.info('Gathered successfully', responses.filter(val => !val.error))
 
       responses.filter(val => !val.data.error).map(({name, data}) => {
-        writeFile(`./tokens/${name}-tokens.json`, JSON.stringify(data))
+          const category = name.split('-')[0]
+        writeFile(`./tokens/${category}/${name}-tokens.json`, JSON.stringify(data))
       })
       
  
