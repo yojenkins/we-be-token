@@ -1,7 +1,7 @@
 {
   "name": "we-be-token",
   "version": "1.0.0",
-  "description": "Test ",
+  "description": "Exploratory work for gathering and transforming RE/MAX design tokens with Style Dictionary",
   "main": "scripts/build.ts",
   "scripts": {
     "start": "npm run transform-tokens",
